@@ -1,30 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oficina Viva IA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://cdn.pixabay.com/photo/2016/11/22/23/44/idea-1857536_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #4b2e2e;
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 10px;
+      border-radius: 12px;
+    }
+    .pix-button {
+      margin-bottom: 30px;
+      background-color: #00796B;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .paypal-container {
+      margin: 30px auto;
+      width: fit-content;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 12px;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #444;
+    }
+  </style>
+</head>
 <body>
-  <div class="overlay">
-    <img src="https://i.ibb.co/hM7Wgzz/oficina-viva-menino-ferramentas.png" alt="Oficina Viva IA" style="max-width: 100%; border-radius: 16px; box-shadow: 0 0 30px rgba(0,0,0,0.2); margin-bottom: 30px;" />
 
-    <h1>Bem-vinda à Oficina Viva IA</h1>
-    <p style="font-size: 1.3em;">
-      <strong>Use nossas ferramentas de criação com IA</strong> para transformar ideias em produtos e serviços reais.<br>
-      Simples, rápido e gentil.
-    </p>
+  <h1>Bem-vinda à Oficina Viva IA</h1>
+  <p>Use nossas ferramentas de criação com IA para transformar ideias em produtos e serviços reais. Simples, rápido e gentil.</p>
 
-    <div class="buttons" style="margin-top: 30px;">
-      <button class="pix-button" onclick="window.location.href='mailto:cristin.rocha7@gmail.com'">
-        Contribuir via Pix: cristin.rocha7@gmail.com
-      </button>
-    </div>
+  <button class="pix-button" onclick="window.location.href='mailto:cristin.rocha7@gmail.com'">
+    Contribuir via Pix: cristin.rocha7@gmail.com
+  </button>
 
-    <div id="paypal-container-VKBFJ4FJUCQXL" style="margin-top: 30px;"></div>
-    <div id="paypal-container-9RVPQ72664CDC" style="margin-top: 10px;"></div>
-
-    <p style="margin-top:40px; font-size: 0.9em; color: #ccc;">
-      Criado com propósito por <strong>Maria Cristina Rocha Garcia</strong>
-    </p>
+  <div class="paypal-container">
+    <h3>Oficina Viva</h3>
+    <p>Serviços com IA – Acesso 24h</p>
+    <div id="paypal-container-VKBFJ4FJUCQXL"></div>
   </div>
 
+  <div class="paypal-container">
+    <h3>Oficina Viva</h3>
+    <p>Produto de serviços com IA – Plano Mensal</p>
+    <div id="paypal-container-9RVPQ72664CDC"></div>
+  </div>
+
+  <footer>
+    Criado com propósito por <strong>Maria Cristina Rocha Garcia</strong>
+  </footer>
+
   <script src="https://www.paypal.com/sdk/js?client-id=BAAaVkUxaVBs6tRyAIsC5SzH1jhrwK-GialFVALkLGvy6BVhXUENAbFKPsHsU23Sj2bs_PxNIzZ5IzAYCw&components=hosted-buttons&disable-funding=venmo&currency=BRL"></script>
+
   <script>
-    paypal.HostedButtons({ hostedButtonId: "VKBFJ4FJUCQXL" }).render("#paypal-container-VKBFJ4FJUCQXL");
-    paypal.HostedButtons({ hostedButtonId: "9RVPQ72664CDC" }).render("#paypal-container-9RVPQ72664CDC");
+    paypal.HostedButtons({
+      hostedButtonId: "VKBFJ4FJUCQXL",
+    }).render("#paypal-container-VKBFJ4FJUCQXL");
+
+    paypal.HostedButtons({
+      hostedButtonId: "9RVPQ72664CDC",
+    }).render("#paypal-container-9RVPQ72664CDC");
   </script>
 </body>
+</html>

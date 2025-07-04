@@ -1,99 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oficina Viva IA</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fefefe;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      background-image: url("https://raw.githubusercontent.com/Cristin777/oficina-viva-ia/main/oficina-garoto.png");
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-size: 280px;
-    }
-
-    h1 {
-      margin-top: 3rem;
-      font-size: 2.5rem;
-      color: #a52a2a;
-    }
-
-    p {
-      max-width: 600px;
-      font-size: 1.2rem;
-      text-align: center;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    .button-group {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 4rem;
-    }
-
-    .pix-button, .paypal-button {
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .pix-button {
-      background-color: #2e7d32;
-      color: #fff;
-    }
-
-    .paypal-container {
-      margin-top: 1rem;
-    }
-
-    @media screen and (max-width: 600px) {
-      body {
-        background-position: center bottom;
-        background-size: 180px;
-      }
-    }
-  </style>
-</head>
 <body>
-  <h1>Bem-vinda à Oficina Viva IA</h1>
-  <p>Um espaço criativo e gentil, onde a inteligência artificial se coloca a serviço da sua inspiração. Aqui você pode acessar ferramentas, ideias e soluções feitas com carinho, leveza e propósito.</p>
+  <div class="overlay">
+    <img src="https://i.ibb.co/hM7Wgzz/oficina-viva-menino-ferramentas.png" alt="Oficina Viva IA" style="max-width: 100%; border-radius: 16px; box-shadow: 0 0 30px rgba(0,0,0,0.2); margin-bottom: 30px;" />
 
-  <div class="button-group">
-    <a href="https://www.paypal.com/checkoutnow?token=9RVPQ72664CDC" class="pix-button" target="_blank">Acesso 24h - R$30</a>
-    <a href="https://www.paypal.com/checkoutnow?token=VKBFJ4FJUCQXL" class="pix-button" style="background-color:#1a237e">Plano Mensal - R$147</a>
+    <h1>Bem-vinda à Oficina Viva IA</h1>
+    <p style="font-size: 1.3em;">
+      <strong>Use nossas ferramentas de criação com IA</strong> para transformar ideias em produtos e serviços reais.<br>
+      Simples, rápido e gentil.
+    </p>
+
+    <div class="buttons" style="margin-top: 30px;">
+      <button class="pix-button" onclick="window.location.href='mailto:cristin.rocha7@gmail.com'">
+        Contribuir via Pix: cristin.rocha7@gmail.com
+      </button>
+    </div>
+
+    <div id="paypal-container-VKBFJ4FJUCQXL" style="margin-top: 30px;"></div>
+    <div id="paypal-container-9RVPQ72664CDC" style="margin-top: 10px;"></div>
+
+    <p style="margin-top:40px; font-size: 0.9em; color: #ccc;">
+      Criado com propósito por <strong>Maria Cristina Rocha Garcia</strong>
+    </p>
   </div>
 
-  <div class="paypal-container">
-    <script 
-      src="https://www.paypal.com/sdk/js?client-id=BAAaVkUxaVBs6tRyAIsC5SzH1jhrwK-GialFVALkLGvy6BVhXUENAbFKPsHsU23Sj2bs_PxNIzZ5IzAYCw&components=hosted-buttons&disable-funding=venmo&currency=BRL">
-    </script>
-    <div id="paypal-container-VKBFJ4FJUCQXL"></div>
-    <script>
-      paypal.HostedButtons({
-        hostedButtonId: "VKBFJ4FJUCQXL",
-      }).render("#paypal-container-VKBFJ4FJUCQXL")
-    </script>
-
-    <div id="paypal-container-9RVPQ72664CDC"></div>
-    <script>
-      paypal.HostedButtons({
-        hostedButtonId: "9RVPQ72664CDC",
-      }).render("#paypal-container-9RVPQ72664CDC")
-    </script>
-  </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAaVkUxaVBs6tRyAIsC5SzH1jhrwK-GialFVALkLGvy6BVhXUENAbFKPsHsU23Sj2bs_PxNIzZ5IzAYCw&components=hosted-buttons&disable-funding=venmo&currency=BRL"></script>
+  <script>
+    paypal.HostedButtons({ hostedButtonId: "VKBFJ4FJUCQXL" }).render("#paypal-container-VKBFJ4FJUCQXL");
+    paypal.HostedButtons({ hostedButtonId: "9RVPQ72664CDC" }).render("#paypal-container-9RVPQ72664CDC");
+  </script>
 </body>
-</html>

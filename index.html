@@ -7,94 +7,114 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
       text-align: center;
     }
-    header {
-      background-color: #ffffff;
-      padding: 20px;
-      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
     }
+
     h1 {
-      color: #5a1f1f;
-      margin-top: 10px;
+      font-size: 2em;
+      color: #2c2c2c;
+      margin-bottom: 0.2em;
     }
+
     p {
-      font-size: 1.1rem;
-      color: #333;
-      margin: 0 auto 20px;
-      max-width: 600px;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
     }
+
     .pix-button {
       background-color: #2e7d32;
-      color: #fff;
-      padding: 12px 20px;
-      font-size: 1rem;
-      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
       border-radius: 8px;
-      margin-bottom: 30px;
-      cursor: pointer;
+      margin-bottom: 25px;
+      display: inline-block;
     }
-    .product {
-      background-color: #fff;
-      padding: 25px;
-      margin: 20px auto;
-      border-radius: 12px;
-      max-width: 500px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    .planos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #666;
+
+    .plano {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+      max-width: 350px;
     }
-    img.illustration {
-      width: 120px;
+
+    .paypal-button {
       margin-top: 10px;
     }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://raw.githubusercontent.com/Cristin777/Oficina-Viva-IA/main/public/oficina-logo.png" alt="Ilustração Oficina Viva" class="illustration" />
+  <div class="container">
+    <img src="https://cdn.pixabay.com/photo/2020/10/12/21/23/robot-5643450_1280.jpg" alt="Ilustração Oficina Viva" class="banner" />
+
     <h1>Bem-vinda à Oficina Viva IA</h1>
-    <p><strong>Use nossas ferramentas de criação com IA</strong> para transformar ideias em produtos e serviços reais.  
-    Simples, rápido e gentil.</p>
-    <button class="pix-button" onclick="navigator.clipboard.writeText('cristin.rocha7@gmail.com')">Contribuir via Pix: cristin.rocha7@gmail.com</button>
-  </header>
 
-  <div class="product">
-    <h2>Oficina Viva</h2>
-    <p>Serviços com IA — <strong>Acesso 24h</strong></p>
-    <p><strong>R$ 30,00 BRL</strong></p>
-    <div id="paypal-container-VKB3F4JUJCQL"></div>
+    <p><strong>Use nossas ferramentas de criação com IA</strong> para transformar ideias em produtos e serviços reais.<br> Simples, rápido e gentil.</p>
+
+    <a class="pix-button" href="mailto:cristin.rocha7@gmail.com?subject=Contribuição via Pix">Contribuir via Pix: cristin.rocha7@gmail.com</a>
+
+    <div class="planos">
+      <div class="plano">
+        <h2>Oficina Viva</h2>
+        <p>Serviços com IA — <strong>Acesso 24h</strong></p>
+        <p><strong>R$ 30,00 BRL</strong></p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="paypal-button">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="WZ9M8VJLNZWRL" />
+          <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Pague com PayPal" />
+        </form>
+      </div>
+
+      <div class="plano">
+        <h2>Oficina Viva</h2>
+        <p>Produto de serviços com IA — <strong>Plano Mensal</strong></p>
+        <p><strong>R$ 127,00 BRL</strong></p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="paypal-button">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="3VGRFNNCT3C7W" />
+          <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Pague com PayPal" />
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      Criado com propósito por Maria Cristina Rocha Garcia © 2025
+    </footer>
   </div>
-
-  <div class="product">
-    <h2>Oficina Viva</h2>
-    <p>Produto de serviços com IA — <strong>Plano Mensal</strong></p>
-    <p><strong>R$ 127,00 BRL</strong></p>
-    <div id="paypal-container-9RVPQ72664CDC"></div>
-  </div>
-
-  <footer>
-    Criado com propósito por <strong>Maria Cristina Rocha Garcia</strong>
-  </footer>
-
-  <!-- PayPal scripts -->
-  <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAAaVkUxaVBs6tRyAIsC5SzH1jhrwK-GialFVALkLGvy6BVhXUENAbFKPsHsU23Sj2bs_PxNIzZ5IzAYCw&components=hosted-buttons&disable-funding=venmo&currency=BRL">
-  </script>
-  <script>
-    paypal.HostedButtons({
-      hostedButtonId: "VKB3F4JUJCQL"
-    }).render("#paypal-container-VKB3F4JUJCQL");
-
-    paypal.HostedButtons({
-      hostedButtonId: "9RVPQ72664CDC"
-    }).render("#paypal-container-9RVPQ72664CDC");
-  </script>
 </body>
 </html>

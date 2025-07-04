@@ -1,96 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oficina Viva IA</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      text-align: center;
+      font-family: 'Georgia', serif;
+      background-color: #fefefe;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      background-image: url("https://raw.githubusercontent.com/Cristin777/oficina-viva-ia/main/oficina-garoto.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 280px;
     }
 
-    header {
-      background-color: #fff;
-      padding: 2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #444;
-    }
-
-    .banner {
-      margin-top: 2rem;
-    }
-
-    .banner img {
-      max-width: 400px;
-      width: 80%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .conteudo {
-      margin: 2rem auto;
-      max-width: 600px;
-      padding: 0 1rem;
-    }
-
-    .botoes {
-      margin-top: 2rem;
-    }
-
-    .botoes a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #0070f3;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .botoes a:hover {
-      background-color: #005dc1;
-    }
-
-    footer {
+    h1 {
       margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #777;
+      font-size: 2.5rem;
+      color: #a52a2a;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    .pix-button, .paypal-button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .pix-button {
+      background-color: #2e7d32;
+      color: #fff;
+    }
+
+    .paypal-container {
+      margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        background-position: center bottom;
+        background-size: 180px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Oficina Viva IA</h1>
-    <p>Ferramentas inteligentes para dar vida aos seus projetos</p>
-  </header>
+  <h1>Bem-vinda à Oficina Viva IA</h1>
+  <p>Um espaço criativo e gentil, onde a inteligência artificial se coloca a serviço da sua inspiração. Aqui você pode acessar ferramentas, ideias e soluções feitas com carinho, leveza e propósito.</p>
 
-  <div class="banner">
-    <img src="https://raw.githubusercontent.com/Cristin777/assets/main/oficina-banner.png" alt="Oficina Viva IA Banner">
+  <div class="button-group">
+    <a href="https://www.paypal.com/checkoutnow?token=9RVPQ72664CDC" class="pix-button" target="_blank">Acesso 24h - R$30</a>
+    <a href="https://www.paypal.com/checkoutnow?token=VKBFJ4FJUCQXL" class="pix-button" style="background-color:#1a237e">Plano Mensal - R$147</a>
   </div>
 
-  <div class="conteudo">
-    <p>Explore, crie, aprenda e transforme ideias em realidade com inteligência artificial.</p>
-    <div class="botoes">
-      <a href="https://chat.openai.com/gpts?search=Oficina%20Viva%20IA" target="_blank">Acessar IA Oficina Viva</a>
-      <a href="#planos">Ver Planos</a>
-    </div>
-  </div>
+  <div class="paypal-container">
+    <script 
+      src="https://www.paypal.com/sdk/js?client-id=BAAaVkUxaVBs6tRyAIsC5SzH1jhrwK-GialFVALkLGvy6BVhXUENAbFKPsHsU23Sj2bs_PxNIzZ5IzAYCw&components=hosted-buttons&disable-funding=venmo&currency=BRL">
+    </script>
+    <div id="paypal-container-VKBFJ4FJUCQXL"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "VKBFJ4FJUCQXL",
+      }).render("#paypal-container-VKBFJ4FJUCQXL")
+    </script>
 
-  <footer>
-    Criado por Maria Cristina Rocha Garcia | Powered by Vercel, GitHub e você ✨
-  </footer>
+    <div id="paypal-container-9RVPQ72664CDC"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "9RVPQ72664CDC",
+      }).render("#paypal-container-9RVPQ72664CDC")
+    </script>
+  </div>
 </body>
 </html>
